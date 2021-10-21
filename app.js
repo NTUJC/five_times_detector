@@ -10,8 +10,12 @@ let list_4 //藝 Fun
 let list_5 //動滋
 let list_6  //客庄
 let list_7  //地方創生
-let all_list = [list_1, list_2, list_3, list_4, list_5, list_6, list_7];
+
 let lottery = "";
+let win_times=0;
+
+
+
 
 click_check.addEventListener('click', ()=>{
 
@@ -23,80 +27,61 @@ click_check.addEventListener('click', ()=>{
     list_6 = [81, 900]; //客庄
     list_7 = [081, 105, 594, 188, 089, 396, 521, 467, 912, 798, 358, 441, 367, 941, 335]; //地方創生
 
-    for(let i=0;i<list_1.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_1[i].toString().length));
-        console.log();
-        if(true_num == list_1[i]){
+    for(i=0;i<list_1.length;i++){
+        your_id = user.value.split("").slice(-list_1[i].length).join("");
+        if (your_id == list_1[i]){
             lottery += '～國旅券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
-    for(let i=0;i<list_2.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_2[i].toString().length));
-        if(true_num == list_2[i]){
+    for(i=0;i<list_2.length;i++){
+        your_id = user.value.split("").slice(-list_2[i].length).join("");
+        if (your_id == list_2[i]){
             lottery += '～ i 原券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
-    for(let i=0;i<list_3.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_3[i].toString().length));
-        if(true_num == list_3[i]){
+    for(i=0;i<list_3.length;i++){
+        your_id = user.value.split("").slice(-list_3[i].length).join("");
+        if (your_id == list_3[i]){
             lottery += '～農遊券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
-
-    for(let i=0;i<list_4.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_4[i].toString().length));
-        if(true_num == list_4[i]){
-            lottery += '～藝 Fun 券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+    for(i=0;i<list_4.length;i++){
+        your_id = user.value.split("").slice(-list_4[i].length).join("");
+        if (your_id == list_4[i]){
+            lottery += '～藝 Fun 券（數位）中籤！～' + '\n';
+            win_times += 1;
+        } 
     }
-    for(let i=0;i<list_5.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_5[i].toString().length));
-        if(true_num == list_5[i]){
+    for(i=0;i<list_5.length;i++){
+        your_id = user.value.split("").slice(-list_5[i].length).join("");
+        if (your_id == list_5[i]){
             lottery += '～動滋券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
-    for(let i=0;i<list_6.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_6[i].toString().length));
-        if(true_num == list_6[i]){
+    for(i=0;i<list_6.length;i++){
+        your_id = user.value.split("").slice(-list_6[i].length).join("");
+        if (your_id == list_6[i]){
             lottery += '～客庄券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
-    for(let i=0;i<list_7.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_7[i].toString().length));
-        if(true_num == list_7[i]){
+    for(i=0;i<list_7.length;i++){
+        your_id = user.value.split("").slice(-list_7[i].length).join("");
+        if (your_id == list_7[i]){
             lottery += '～地方創生券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
 
-    console.log(lottery);
+    if( win_times > 1 ){
+        lottery += '重複中籤！只能得「較前面」且有「登記」\n';
+    }
+    win_times = 0;
+
   // 第二週
 
     list_1 = [87, 04, 40, 29, 71]; //國旅
@@ -108,77 +93,60 @@ click_check.addEventListener('click', ()=>{
     list_7 = [99999999999999999]; //地方創生
     let lottery2 = "";
 
-    for(let i=0;i<list_1.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_1[i].toString().length));
-        if(true_num == list_1[i]){
+    for(i=0;i<list_1.length;i++){
+        your_id = user.value.split("").slice(-list_1[i].length).join("");
+        if (your_id == list_1[i]){
             lottery2 += '～國旅券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
-    for(let i=0;i<list_2.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_2[i].toString().length));
-        if(true_num == list_2[i]){
+    for(i=0;i<list_2.length;i++){
+        your_id = user.value.split("").slice(-list_2[i].length).join("");
+        if (your_id == list_2[i]){
             lottery2 += '～ i 原券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
     }
-    for(let i=0;i<list_3.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_3[i].toString().length));
-        if(true_num == list_3[i]){
+    for(i=0;i<list_3.length;i++){
+        your_id = user.value.split("").slice(-list_3[i].length).join("");
+        if (your_id == list_3[i]){
             lottery2 += '～農遊券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+            win_times += 1;
+        } 
+    }
+    for(i=0;i<list_4.length;i++){
+        your_id = user.value.split("").slice(-list_4[i].length).join("");
+        if (your_id == list_4[i]){
+            lottery2 += '～藝 Fun 券（數位）中籤！～' + '\n';
+            win_times += 1;
+        } 
+    }
+    for(i=0;i<list_5.length;i++){
+        your_id = user.value.split("").slice(-list_5[i].length).join("");
+        if (your_id == list_5[i]){
+            lottery2 += '～動滋券中籤！～' + '\n';
+            win_times += 1;
+        } 
+    }
+    for(i=0;i<list_6.length;i++){
+        your_id = user.value.split("").slice(-list_6[i].length).join("");
+        if (your_id == list_6[i]){
+            lottery2 += '～客庄券中籤！～' + '\n';
+            win_times += 1;
+        } 
+    }
+    for(i=0;i<list_7.length;i++){
+        your_id = user.value.split("").slice(-list_7[i].length).join("");
+        if (your_id == list_7[i]){
+            lottery2 += '～地方創生券中籤！～' + '\n';
+            win_times += 1;
+        } 
     }
 
-    for(let i=0;i<list_4.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_4[i].toString().length));
-        if(true_num == list_4[i]){
-            lottery2 += '～藝 Fun 券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
+    if( win_times > 1 ){
+        lottery += '重複中籤！只能得「較前面」且有「登記」\n';
     }
-    for(let i=0;i<list_5.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_5[i].toString().length));
-        if(true_num == list_5[i]){
-            lottery2 += '～動滋券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
-    }
-    for(let i=0;i<list_6.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_6[i].toString().length));
-        if(true_num == list_6[i]){
-            lottery2 += '～客庄券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
-    }
-    for(let i=0;i<list_7.length;i++){
-        user_num = parseInt(user.value.toString());
-        let true_num = user_num % (10 ** (list_7[i].toString().length));
-        if(true_num == list_7[i]){
-            lottery2 += '～地方創生券中籤！～' + '\n';
-        }
-        else{
-            continue;
-        }
-    }
+    win_times = 0;
     
     if (lottery == ""){
         if (lottery2 == "") {
@@ -189,9 +157,9 @@ click_check.addEventListener('click', ()=>{
         };
     } else {
         if(lottery2 ==""){
-            alert("第一週：\n" + lottery + "\n第二週沒中！");
+            alert("第一週：\n" + lottery + '\n' + "第二週沒中！");
         } else{
-            alert("第一週：\n" + lottery + '第二週：' + '\n' + lottery2);
+            alert("第一週：\n" + lottery + '\n第二週：' + '\n' + lottery2);
         };
     }
 
@@ -199,7 +167,6 @@ click_check.addEventListener('click', ()=>{
     lottery2 = "";
     user.value = "";
 })
-
 
 
 
