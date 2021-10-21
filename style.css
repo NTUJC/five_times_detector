@@ -191,3 +191,13 @@ p {
 .social_icon {
   padding-right: 10px;
 }
+
+section .color:nth-child(1) {
+  background: #ff359d;
+}
+section .color:nth-child(2) {
+  background: #fffd87;
+}
+section .color:nth-child(3) {
+  background: #00d2ff;
+}
