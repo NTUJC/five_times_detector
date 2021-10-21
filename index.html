@@ -22,16 +22,16 @@
             <div class="square" style="--i:4;"></div>
             <div class="container">
                 <div class="form">
-                    <h2>你的身分證字號！（可以打末幾碼就好）</h2>
+                    <h2>你的身分證字號！</h2>
                     <div id="form_to_div">
                         <div class="inputBox">
-                            <input type="text" placeholder="###">
+                            <input type="text" id="user_id_num" placeholder="輸入末幾碼就好">
+                        </div>
+                        <!-- <div class="inputBox">
+                            <input type="text" placeholder="###"> -->
                         </div>
                         <div class="inputBox">
-                            <input type="text" placeholder="###">
-                        </div>
-                        <div class="inputBox">
-                            <input type="submit" value="Login">
+                            <input id="check_price" type="submit" value="對獎！">
                         </div>
                         <p class="forget">Forget</p>
                         <p class="forget">Don't have?</p>
@@ -41,5 +41,6 @@
             </div>
         </div>
     </section>
+    <script src="app.js"></script>
 </body>
 </html>
