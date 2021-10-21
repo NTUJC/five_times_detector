@@ -178,6 +178,7 @@ click_check.addEventListener('click', ()=>{
     if (lottery == ""){
         if (lottery2 == "") {
             alert("第一週沒中！ \n第二週沒中！" );
+
         } else{
             alert('第二週：' + '\n' + lottery);
         };
@@ -188,6 +189,10 @@ click_check.addEventListener('click', ()=>{
             alert("第一週：\n" + lottery + "\n第二週沒中！");
         };
     }
+
+    lottery = "";
+    lottery2 = "";
+    user.value = "";
 })
 
 
