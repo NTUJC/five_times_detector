@@ -52,8 +52,8 @@ section .color:nth-child(3) {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  animation: animate 6s linear infinite;
+  border-radius: 15px;
+  animation: animate 3s linear infinite;
   animation-delay: calc(-1s * var(--i));
 }
 @keyframes animate {
@@ -121,7 +121,7 @@ section .color:nth-child(3) {
 }
 .form h2 {
   position: relative;
-  color: #000;
+  color: #6555d1;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -153,15 +153,15 @@ section .color:nth-child(3) {
   border-bottom: rgba(255, 255, 255, 0.2);
   font-size: 16px;
   letter-spacing: 1px;
-  color: #000;
+  color: #6555d1;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 .form .inputBox input::placeholder {
-  color: #000;
+  color: #9f96dc;
 }
 .form .inputBox input[type="submit"] {
   background: #fff;
-  color: #666;
+  color: #6555d1;
   max-width: 100px;
   cursor: pointer;
   margin-bottom: 20px;
@@ -169,7 +169,7 @@ section .color:nth-child(3) {
 }
 .forget {
   margin-top: 5px;
-  color: #000;
+  color: #d574a4;
 }
 a {
   color: #000;
@@ -184,8 +184,8 @@ p {
   align-items: center;
 }
 #check_price:hover {
-  color: #466882;
-  background-color: rgba(0, 0, 0, 0.262);
+  color: #d574a4;
+  background-color: #f2cbdf;
   transition: all 0.7s ease;
 }
 .social_icon {
