@@ -244,19 +244,19 @@ section .color:nth-child(3) {
   section .color:nth-child(1) {
     top: 0px;
     right: 30px;
-    width: 300px;
+    width: 500px;
     height: 300px;
   }
   section .color:nth-child(2) {
     bottom: 200px;
     left: 0px;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 400px;
   }
   section .color:nth-child(3) {
     bottom: 0px;
     right: 0px;
-    width: 300px;
+    width: 400px;
     height: 300px;
   }
 }
