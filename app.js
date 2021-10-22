@@ -160,16 +160,16 @@ click_check.addEventListener('click', ()=>{
         
         if (lottery == ""){
             if (lottery2 == "") {
-                info.innerHTML = "<font color='red'>第一週沒中！<br><br> 第二週沒中！</font>" ;
+                info.innerHTML = "<font color='red'>第一週沒中！<br><div class='space'></div> 第二週沒中！</font>" ;
 
             } else{
-                info.innerHTML = "<font color='red'>第一週沒中！</font><br>" + '<br>第二週：<br>' + lottery2;
+                info.innerHTML = "<font color='red'>第一週沒中！</font><br><div class='space'></div>" + '第二週：<br>' + lottery2;
             };
         } else {
             if(lottery2 ==""){
-                info.innerHTML = "第一週：<br>" + lottery + "</br> <font color='red'> 第二週沒中！</font>";
+                info.innerHTML = "第一週：<br>" + lottery + " <font color='red'><div class='space'></div> 第二週沒中！</font>";
             } else{
-                info.innerHTML = "第一週：<br>" + lottery + '<br>第二週：<br>' + '<br>' + lottery2;
+                info.innerHTML = "第一週：<br><div class='space'></div>" + lottery + '第二週：<br>' + '<br>' + lottery2;
             };
         }
 
