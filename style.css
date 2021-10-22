@@ -195,10 +195,7 @@ a {
   color: #000;
   text-decoration: none;
 }
-p:hover {
-  transform: translateY(-2px);
-  transition: all 0.5s ease;
-}
+
 p {
   display: flex;
   align-items: center;
