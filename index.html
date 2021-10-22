@@ -11,6 +11,7 @@
     <link rel="bookmark" href="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-cat-animal-justicon-lineal-color-justicon-1.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="jc_button.css">
+    <link rel="stylesheet" href="price_info.css">
     <title>五倍券快速對獎！</title>
 </head>
 
@@ -33,8 +34,8 @@
                         <div class="inputBox">
                             <input type="text" id="user_id_num" placeholder="輸入身分證至少末三碼！" onkeyup="if(event.keyCode !=37 && event.keyCode != 39)value=value.replace(/\D/g,'')">
                         </div>
-                        <!-- <div class="inputBox">
-                            <input type="text" placeholder="###"> -->
+                        <div class="inputBox">
+                            <div id="price_info"></div>
                         </div>
                         <div class="inputBox">
                             <input id="check_price" type="submit" value="對獎！">
@@ -67,6 +68,7 @@
             </div>
         </div>
     </section>
+
     <script src="app.js"></script>
 </body>
 </html>

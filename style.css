@@ -156,6 +156,22 @@ section .color:nth-child(3) {
   color: #6555d1;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
+#price_info {
+  display: none;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #6555d1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
 .form .inputBox input::placeholder {
   color: #9f96dc;
 }
