@@ -46,53 +46,118 @@ click_check.addEventListener('click', ()=>{
         for(i=0;i<list_2.length;i++){
             your_id = user.value.split("").slice(-list_2[i].length).join("");
             if (your_id == list_2[i]){
-                lottery += ' i 原券中籤！' + '<br>';
+                lottery += ' i 原券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_3.length;i++){
             your_id = user.value.split("").slice(-list_3[i].length).join("");
             if (your_id == list_3[i]){
-                lottery += '農遊券中籤！' + '<br>';
+                lottery += '農遊券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_4.length;i++){
             your_id = user.value.split("").slice(-list_4[i].length).join("");
             if (your_id == list_4[i]){
-                lottery += '藝 Fun 券（數位）中籤！' + '<br>';
+                lottery += '藝 Fun 券（數位）' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_5.length;i++){
             your_id = user.value.split("").slice(-list_5[i].length).join("");
             if (your_id == list_5[i]){
-                lottery += '動滋券中籤！' + '<br>';
+                lottery += '動滋券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_6.length;i++){
             your_id = user.value.split("").slice(-list_6[i].length).join("");
             if (your_id == list_6[i]){
-                lottery += '客庄券中籤！' + '<br>';
+                lottery += '客庄券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_7.length;i++){
             your_id = user.value.split("").slice(-list_7[i].length).join("");
             if (your_id == list_7[i]){
-                lottery += '地方創生券中籤！' + '<br>';
+                lottery += '地方創生券' + '<br>';
                 win_times += 1;
             } 
         }
 
         if( win_times > 1 ){
-            lottery += '重複中籤！只能得「較前面」且有「登記」<br>';
+            lottery += '<font color=#68db77;>注意重複中籤！</font><br>';
         }
         win_times = 0;
 
     // 第二週
 
+        list_1 = ['44', '34', '09', '55', '35', '041']; //國旅
+        list_2 = ['48', '49']; //i 原
+        // list_3 = ['50', '13']; //農遊
+        // list_4 = ['78', '00', '39', '22', '61', '23', '15']; //藝 Fun
+        // list_5 = ['91', '11', '04', '18', '57', '498', '756']; //動滋
+        // list_6 = ['11', '439', '841', '052', '206', '161', '457', '205', '012', '293', '446', '589']; //客庄
+        // list_7 = ['598', '880', '886', '675', '684', '568', '645', '456']; //地方創生
+
+        let lottery2 = "";
+
+        for(i=0;i<list_1.length;i++){
+            your_id = user.value.split("").slice(-list_1[i].length).join("");
+            if (your_id == list_1[i]){
+                lottery2 += '國旅券' + '<br>';
+                win_times += 1;
+            } 
+        }
+        for(i=0;i<list_2.length;i++){
+            your_id = user.value.split("").slice(-list_2[i].length).join("");
+            if (your_id == list_2[i]){
+                lottery2 += ' i 原券' + '<br>';
+                win_times += 1;
+            } 
+        }
+        for(i=0;i<list_3.length;i++){
+            your_id = user.value.split("").slice(-list_3[i].length).join("");
+            if (your_id == list_3[i]){
+                lottery2 += '農遊券' + '<br>';
+                win_times += 1;
+            } 
+        }
+        for(i=0;i<list_4.length;i++){
+            your_id = user.value.split("").slice(-list_4[i].length).join("");
+            if (your_id == list_4[i]){
+                lottery2 += '藝 Fun 券（數位）' + '<br>';
+                win_times += 1;
+            } 
+        }
+        for(i=0;i<list_5.length;i++){
+            your_id = user.value.split("").slice(-list_5[i].length).join("");
+            if (your_id == list_5[i]){
+                lottery2 += '動滋券' + '<br>';
+                win_times += 1;
+            } 
+        }
+        for(i=0;i<list_6.length;i++){
+            your_id = user.value.split("").slice(-list_6[i].length).join("");
+            if (your_id == list_6[i]){
+                lottery2 += '客庄券' + '<br>';
+                win_times += 1;
+            } 
+        }
+        for(i=0;i<list_7.length;i++){
+            your_id = user.value.split("").slice(-list_7[i].length).join("");
+            if (your_id == list_7[i]){
+                lottery2 += '地方創生券' + '<br>';
+                win_times += 1;
+            } 
+        }
+
+        if( win_times > 1 ){
+            lottery += '<font color=#68db77;>注意重複中籤！</font><br>';
+        }
+        win_times = 0;
+        
         list_1 = ['87', '04', '40', '29', '71']; //國旅
         list_2 = ['12', '59']; //i 原
         list_3 = ['50', '13']; //農遊
@@ -101,75 +166,76 @@ click_check.addEventListener('click', ()=>{
         list_6 = ['11', '439', '841', '052', '206', '161', '457', '205', '012', '293', '446', '589']; //客庄
         list_7 = ['598', '880', '886', '675', '684', '568', '645', '456']; //地方創生
 
-        let lottery2 = "";
+        let lottery3 = "";
 
         for(i=0;i<list_1.length;i++){
             your_id = user.value.split("").slice(-list_1[i].length).join("");
             if (your_id == list_1[i]){
-                lottery2 += '國旅券中籤！' + '<br>';
+                lottery3 += '國旅券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_2.length;i++){
             your_id = user.value.split("").slice(-list_2[i].length).join("");
             if (your_id == list_2[i]){
-                lottery2 += ' i 原券中籤！' + '<br>';
+                lottery3 += ' i 原券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_3.length;i++){
             your_id = user.value.split("").slice(-list_3[i].length).join("");
             if (your_id == list_3[i]){
-                lottery2 += '農遊券中籤！' + '<br>';
+                lottery3 += '農遊券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_4.length;i++){
             your_id = user.value.split("").slice(-list_4[i].length).join("");
             if (your_id == list_4[i]){
-                lottery2 += '藝 Fun 券（數位）中籤！' + '<br>';
+                lottery3 += '藝 Fun 券（數位）' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_5.length;i++){
             your_id = user.value.split("").slice(-list_5[i].length).join("");
             if (your_id == list_5[i]){
-                lottery2 += '動滋券中籤！' + '<br>';
+                lottery3 += '動滋券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_6.length;i++){
             your_id = user.value.split("").slice(-list_6[i].length).join("");
             if (your_id == list_6[i]){
-                lottery2 += '客庄券中籤！' + '<br>';
+                lottery3 += '客庄券' + '<br>';
                 win_times += 1;
             } 
         }
         for(i=0;i<list_7.length;i++){
             your_id = user.value.split("").slice(-list_7[i].length).join("");
             if (your_id == list_7[i]){
-                lottery2 += '地方創生券中籤！' + '<br>';
+                lottery3 += '地方創生券' + '<br>';
                 win_times += 1;
             } 
         }
 
         if( win_times > 1 ){
-            lottery += '重複中籤！只能得「較前面」且有「登記」\n';
+            lottery += '<font color=#68db77;>注意重複中籤！</font><br>';
         }
         win_times = 0;
-        
+
+
         if (lottery == ""){
             if (lottery2 == "") {
                 info.innerHTML = "<font color='red'>第一週沒中！<br><div class='space'></div> 第二週沒中！</font>" ;
 
             } else{
-                info.innerHTML = "<font color='red'>第一週沒中！</font><br><div class='space'></div>" + '第二週：<br>' + lottery2;
+                info.innerHTML = "<font color='red'>第一週沒中！</font><br><div class='space'></div>" + '第二週：<br><br>' + lottery2;
             };
         } else {
             if(lottery2 ==""){
-                info.innerHTML = "第一週：<br>" + lottery + " <font color='red'><div class='space'></div> 第二週沒中！</font>";
+                info.innerHTML = "第一週：<br><br>" + lottery + " <font color='red'><div class='space'></div> 第二週沒中！</font>";
             } else{
-                info.innerHTML = "第一週：<br><div class='space'></div>" + lottery + '第二週：<br>' + '<br>' + lottery2;
+                info.innerHTML = "第一週：<br><br><div class='space'></div>" + lottery + '第二週：<br><br>' + '<br>' + lottery2;
             };
         }
 

@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="jc_button_a.css">
     <link rel="stylesheet" href="jc_button_b.css">
-    <link rel="stylesheet" href="price_info.css">
+
+    <link rel="stylesheet" href="log.css">
     <title>五倍券快速對獎！</title>
 </head>
 
@@ -28,7 +29,7 @@
             <div class="square" style="--i:2;"></div>
             <div class="square" style="--i:3;"></div>
             <div class="square" style="--i:4;"></div>
-            <div class="container">
+            <div class="container" id="container">
                 <div class="form">
                     <h2>五倍券檢查中籤！</h2>
                     <div id="form_to_div">
@@ -52,7 +53,7 @@
                         </p>
                         
                         <p class="forget"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/768px-Facebook_f_logo_%282019%29.svg.png" alt="" width="30px" class="social_icon">
-                            <a href="https://www.facebook.com/sunyanlove" class="button_b" >
+                            <a href="https://www.facebook.com/sunyanlove" class="button_b">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -62,14 +63,26 @@
                         </p>
                         <br>
 
-                        <div style="color:#df7eae; font-size: 13px;"> # 週末到ㄌ  (๑˃̵ᴗ˂̵)و </div>
+                        <p class="forget">
+                            <a href="#" class="button_a" style="color:#df7eae; font-size: 13px;" id="log">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                (๑˃̵ᴗ˂̵)و
+                            </a>
+                        </p></div>
                     </div>
 
                 </div>
+            </div>
+            
             </div>
         </div>
     </section>
 
     <script src="app.js"></script>
+    <script src="log.js"></script>
+
 </body>
 </html>
