@@ -8,17 +8,17 @@ let click_check = document.getElementById('check_price');
 let user_num;
 
 // 第一週
-let list_1  //國旅
-let list_2 //i 原
-let list_3 //農遊
-let list_4 //藝 Fun
-let list_5 //動滋
-let list_6  //客庄
-let list_7  //地方創生
+let list_1=[];  //國旅
+let list_2=[];//i 原
+let list_3=[]; //農遊
+let list_4=[]; //藝 Fun
+let list_5=[];  //動滋
+let list_6=[];   //客庄
+let list_7=[];   //地方創生
 
 let lottery = "";
 let win_times=0;
-
+let message = "";
 
 click_check.addEventListener('click', ()=>{
     info.style.display = "block";
@@ -92,14 +92,15 @@ click_check.addEventListener('click', ()=>{
         win_times = 0;
 
     // 第二週
+        list_1 = ['87', '04', '40', '29', '71']; //國旅
+        list_2 = ['12', '59']; //i 原
+        list_3 = ['50', '13']; //農遊
+        list_4 = ['78', '00', '39', '22', '61', '23', '15']; //藝 Fun
+        list_5 = ['91', '11', '04', '18', '57', '498', '756']; //動滋
+        list_6 = ['11', '439', '841', '052', '206', '161', '457', '205', '012', '293', '446', '589']; //客庄
+        list_7 = ['598', '880', '886', '675', '684', '568', '645', '456']; //地方創生
 
-        list_1 = ['44', '34', '09', '55', '35', '041']; //國旅
-        list_2 = ['48', '49']; //i 原
-        // list_3 = ['50', '13']; //農遊
-        // list_4 = ['78', '00', '39', '22', '61', '23', '15']; //藝 Fun
-        // list_5 = ['91', '11', '04', '18', '57', '498', '756']; //動滋
-        // list_6 = ['11', '439', '841', '052', '206', '161', '457', '205', '012', '293', '446', '589']; //客庄
-        // list_7 = ['598', '880', '886', '675', '684', '568', '645', '456']; //地方創生
+
 
         let lottery2 = "";
 
@@ -154,17 +155,16 @@ click_check.addEventListener('click', ()=>{
         }
 
         if( win_times > 1 ){
-            lottery += '<font color=#68db77;>注意重複中籤！</font><br>';
+            lottery2 += '<font color=#68db77;>注意重複中籤！</font><br>';
         }
         win_times = 0;
-        
-        list_1 = ['87', '04', '40', '29', '71']; //國旅
-        list_2 = ['12', '59']; //i 原
-        list_3 = ['50', '13']; //農遊
-        list_4 = ['78', '00', '39', '22', '61', '23', '15']; //藝 Fun
-        list_5 = ['91', '11', '04', '18', '57', '498', '756']; //動滋
-        list_6 = ['11', '439', '841', '052', '206', '161', '457', '205', '012', '293', '446', '589']; //客庄
-        list_7 = ['598', '880', '886', '675', '684', '568', '645', '456']; //地方創生
+        list_1 = ['44', '34', '09', '55', '35', '041']; //國旅
+        list_2 = ['48', '49']; //i 原
+        list_3=[]; //農遊
+        list_4=[]; //藝 Fun
+        list_5=[];  //動滋
+        list_6=[];   //客庄
+        list_7=[];   //地方創生
 
         let lottery3 = "";
 
@@ -219,29 +219,38 @@ click_check.addEventListener('click', ()=>{
         }
 
         if( win_times > 1 ){
-            lottery += '<font color=#68db77;>注意重複中籤！</font><br>';
+            lottery3 += '<font color=#68db77;>注意重複中籤！</font><br>';
         }
         win_times = 0;
 
-
+        
         if (lottery == ""){
             if (lottery2 == "") {
-                info.innerHTML = "<font color='red'>第一週沒中！<br><div class='space'></div> 第二週沒中！</font>" ;
+                message = "<font color='red'>第一週沒中！<div class='space'></div> 第二週沒中！</font><div class='space'></div>" ;
 
             } else{
-                info.innerHTML = "<font color='red'>第一週沒中！</font><br><div class='space'></div>" + '第二週：<br><br>' + lottery2;
+                message = "<font color='red'>第一週沒中！</font><div class='space'></div>" + '第二週：<br>' + lottery2 + "<div class='space'></div>";
             };
         } else {
             if(lottery2 ==""){
-                info.innerHTML = "第一週：<br><br>" + lottery + " <font color='red'><div class='space'></div> 第二週沒中！</font>";
+                message = "第一週：<br>" + lottery + " <div class='space'></div> <font color='red'>第二週沒中！</font><div class='space'></div>";
             } else{
-                info.innerHTML = "第一週：<br><br><div class='space'></div>" + lottery + '第二週：<br><br>' + '<br>' + lottery2;
+                message = "第一週：<br>" + lottery + "<div class='space'></div> 第二週：" + '<br>' + lottery2 + "<div class='space'></div>";
             };
         }
 
+        if(lottery3 == ""){
+            message += "<font color='red'>第三週沒中！</font><div class='space'></div>";
+        } else{
+            message += "第三週：<br>" + lottery3 + "<div class='space'></div>";
+        }
+        // 第四週時需要加上 跳行＋空白<br><div class='space'></div>
+        info.innerHTML = message;
+
         lottery = "";
         lottery2 = "";
-
+        lottery3 = "";
+        message ="";
     }
     user.value = "";
 })
